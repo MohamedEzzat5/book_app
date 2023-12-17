@@ -7,12 +7,12 @@ import 'package:go_router/go_router.dart';
 import 'book_rating.dart';
 
 class BookListViewIem extends StatelessWidget {
-   const BookListViewIem({super.key});
+  const BookListViewIem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRouter.kBookDetailsView);
       },
       child: SizedBox(
@@ -46,8 +46,8 @@ class BookListViewIem extends StatelessWidget {
                         'Harry Potter and the Goblet of Fire',
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
-                        style:
-                        Styles.textStyle20.copyWith(fontFamily: kGtSectraFine),
+                        style: Styles.textStyle20
+                            .copyWith(fontFamily: kGtSectraFine),
                       )),
                   const SizedBox(
                     height: 3,
@@ -68,7 +68,6 @@ class BookListViewIem extends StatelessWidget {
                       ),
                       const Spacer(),
                       const BookRating(),
-      
                     ],
                   )
                 ],
@@ -80,5 +79,3 @@ class BookListViewIem extends StatelessWidget {
     );
   }
 }
-
-

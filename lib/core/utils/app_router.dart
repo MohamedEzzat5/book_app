@@ -1,6 +1,6 @@
 import 'package:book_app/Features/home/presentation/views/book_details_view.dart';
 import 'package:book_app/Features/home/presentation/views/home_view.dart';
-import 'package:book_app/Features/search/presintation/views/search_view.dart';
+import 'package:book_app/Features/search/presentation/views/search_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import '../../Features/splash/presentation/views/splash_view.dart';

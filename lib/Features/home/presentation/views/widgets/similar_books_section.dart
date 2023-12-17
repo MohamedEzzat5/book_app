@@ -8,7 +8,7 @@ class SimilarBooksSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
@@ -17,8 +17,11 @@ class SimilarBooksSection extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        const SizedBox(height: 16,),
-        const SimilarBooksListView(),],
+        const SizedBox(
+          height: 16,
+        ),
+        const SimilarBooksListView(),
+      ],
     );
   }
 }
