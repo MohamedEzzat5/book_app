@@ -33,6 +33,7 @@ dependencies:
   font_awesome_flutter:
   google_fonts:
   go_router: ^12.1.3
+  equatable:
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -8,7 +8,6 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return const SafeArea(
       child: Scaffold(
         body: Padding(
@@ -18,13 +17,14 @@ class BookDetailsViewBody extends StatelessWidget {
               CustomBookDetailsAppBar(),
               BookDetailsSection(),
               Expanded(
-                child:  SizedBox(
+                child: SizedBox(
                   height: 45,
                 ),
               ),
               SimilarBooksSection(),
-              SizedBox(height: 40,),
-
+              SizedBox(
+                height: 40,
+              ),
             ],
           ),
         ),
@@ -32,9 +32,3 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
