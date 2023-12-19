@@ -6,7 +6,7 @@ import '../../../../../core/utils/custom_loading_indicator.dart';
 import '../../../../../core/widgets/custom_error_widget.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
-  const FeaturedBooksListView({super.key});
+  const FeaturedBooksListView({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +19,13 @@ class FeaturedBooksListView extends StatelessWidget {
                 .size
                 .height * 0.3,
             child: ListView.builder(
+              itemCount: state.books.length,
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 8.0),
-                    child: CustomBookImage(),
+                  return  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: CustomBookImage(imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,),
                   );
                 }),
           );
