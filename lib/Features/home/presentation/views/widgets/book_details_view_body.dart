@@ -9,8 +9,7 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
-      child: Scaffold(
-        body: Padding(
+      child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 30.0),
           child: Column(
             children: [
@@ -28,7 +27,6 @@ class BookDetailsViewBody extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }
