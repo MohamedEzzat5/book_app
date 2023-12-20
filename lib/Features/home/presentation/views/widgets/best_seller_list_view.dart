@@ -15,17 +15,18 @@ class BestSellerListview extends StatelessWidget {
         if(state is NewestBooksSuccess)
         {
           return ListView.builder(
-              scrollDirection: Axis.vertical,
               physics: const NeverScrollableScrollPhysics(),
               padding: EdgeInsets.zero,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return  Padding(
-                  padding:const EdgeInsets.symmetric(vertical: 10.0),
-                  child: BookListViewIem(bookModel: state.books[index],),
-                );
-              });
-        }else if(state is NewestBooksFailure)
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: BookListViewItem(
+                    bookModel: state.books[index],
+                  ),
+                );});
+        }
+        else if(state is NewestBooksFailure)
           {
             return CustomErrorWidget(errMessage: state.errMessage);
           }else

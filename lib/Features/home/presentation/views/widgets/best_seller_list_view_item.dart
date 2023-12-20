@@ -8,8 +8,8 @@ import '../../../../../constance.dart';
 import '../../../../../core/utils/style.dart';
 import 'book_rating.dart';
 
-class BookListViewIem extends StatelessWidget {
-  const BookListViewIem({super.key, required this.bookModel});
+class BookListViewItem extends StatelessWidget {
+  const BookListViewItem({super.key, required this.bookModel});
 final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ final BookModel bookModel;
         height: 125,
         child: Row(
           children: [
-           CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks!.thumbnail),
+           CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? ''),
             const SizedBox(
               width: 30,
             ),
@@ -33,7 +33,7 @@ final BookModel bookModel;
                       width: MediaQuery.of(context).size.width * .5,
                       child: Text(
                         bookModel.volumeInfo.title!,
-                        maxLines: 2,
+                        maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: Styles.textStyle20
                             .copyWith(fontFamily: kGtSectraFine),
